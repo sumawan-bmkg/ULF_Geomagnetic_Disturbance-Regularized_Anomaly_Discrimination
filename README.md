@@ -14,7 +14,7 @@ Berikut adalah ringkasan evolusi model dari Baseline hingga Production Ready.
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **V3** | `Basic EfficientNet` | Baseline CNN untuk CWT Scalogram | 1.000 | -0.167 | Deprecated | - |
 | **V8** | `SupCon Stabilized` | **Supervised Contrastive Loss** + True Negatives | 0.250 | +0.650 | Validated | IEEE Access |
-| **V9.5** | `Champion PIMES` | **SineCosine Loss** + Cosmic Gating + Station Embedding | 0.125 | +0.829 | Champion | J. Applied Geophysics |
+| **V9.5** | `Champion PIMES` | **SineCosine Loss** + Cosmic Gating + Station Embedding | 0.125 | +0.829 | Champion | *TBD*  |
 | **STGAT_V1**| `MultiStation GNN` | **Spatio-Temporal Graph Attention** + Selective Fine-Tuning | *TBD* | *TBD* | Production | *TBD* |
 
 ---
