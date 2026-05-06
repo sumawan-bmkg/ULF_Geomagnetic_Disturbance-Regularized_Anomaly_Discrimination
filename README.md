@@ -1,4 +1,4 @@
-# Geomagnetic Earthquake Precursor Model Zoo (Indonesia)
+# Geomagnetic Earthquake Precursor Model(Indonesia)
 
 Repository ini berisi backup arsitektur dan bobot model (`.pth`) hasil penelitian Disertasi mengenai deteksi prekursor gempa bumi berbasis data geomagnetik ULF BMKG Indonesia.
 
