@@ -1,0 +1,13 @@
+﻿ScalogramV3: Training on cpu
+python : 
+At line:1 char:1
++ python d:\multi\scalogramv3\V3_Train.py > training_error.log 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Epoch 1/15:   0%|          | 0/165 [00:00<?, 
+?it/s]C:\Python314\Lib\site-packages\torch\utils\data\dataloader.py:1118: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't 
+be used.
+  super().__init__(loader)

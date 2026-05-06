@@ -1,0 +1,14 @@
+torch>=2.0.0
+torchvision
+torchaudio
+pandas
+numpy
+matplotlib
+scikit-learn
+h5py
+scipy
+seaborn
+tqdm
+pyyaml
+torch_geometric
+networkx
