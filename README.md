@@ -1,48 +1,48 @@
-# Geomagnetic Earthquake Precursor Model(Indonesia)
+# Geomagnetic Earthquake Precursor Model (Indonesia)
 
-Repository ini berisi backup arsitektur dan bobot model (`.pth`) hasil penelitian Disertasi mengenai deteksi prekursor gempa bumi berbasis data geomagnetik ULF BMKG Indonesia.
+This repository contains a backup of the model architecture and weights (`.pth`) from a dissertation study on earthquake precursor detection based on ULF geomagnetic data from the Indonesian Meteorology, Climatology, and Geophysical Agency (BMKG).
 
-⚠️ **CATATAN PENTING:** Repository ini menggunakan **Git LFS**. Pastikan Anda menginstal Git LFS sebelum melakukan cloning.
+⚠️ **IMPORTANT NOTE:** This repository uses **Git LFS**. Make sure you have Git LFS installed before cloning.
 
 ---
 
-## 📈 Silsilah Evolusi Model (Ablation Study)
+## 📈 Model Evolution Genealogy (Ablation Study)
 
-Berikut adalah ringkasan evolusi model dari Baseline hingga Production Ready.
+The following is a summary of the model's evolution from Baseline to Production Ready.
 
-| Versi | Nama Sandi | Inovasi Utama | FPR (Val) | EWS Score | Status | Target Publikasi |
+| Version | Codename | Key Innovations | FPR (Val) | EWS Score | Status | Target Publication |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **V3** | `Basic EfficientNet` | Baseline CNN untuk CWT Scalogram | 1.000 | -0.167 | Deprecated | - |
+| **V3** | `Basic EfficientNet` | CNN Baseline for CWT Scalogram | 1,000 | -0.167 | Deprecated | - |
 | **V8** | `SupCon Stabilized` | **Supervised Contrastive Loss** + True Negatives | 0.250 | +0.650 | Validated | IEEE Access |
-| **V9.5** | `Champion PIMES` | **SineCosine Loss** + Cosmic Gating + Station Embedding | 0.125 | +0.829 | Champion | *TBD*  |
+| **V9.5** | `Champion PIMES` | **SineCosine Loss** + Cosmic Gating + Station Embedding | 0.125 | +0.829 | Champions | *TBD* |
 | **STGAT_V1**| `MultiStation GNN` | **Spatio-Temporal Graph Attention** + Selective Fine-Tuning | *TBD* | *TBD* | Production | *TBD* |
 
 ---
 
-## 📂 Struktur Folder
+## 📂 Folder Structure
 
-* `/core_modules`: Berisi utility Python dasar (DataLoader, preprocessing CWT).
-* `/V3_Basic_EfficientNet`: Arsitektur baseline dengan FPR tinggi.
-* `/V8_SupCon_Stabilized`: Implementasi Contrastive Learning pertama yang menstabilkan FPR.
-* `/V9.5_Champion_PIMES`: Model final stasiun-tunggal dengan injeksi fisika.
-* `/STGAT_V1_MultiStation`: Model Graph Neural Network untuk konsensus multi-stasiun (Optimal RAM).
+* `/core_modules`: Contains basic Python utilities (DataLoader, CWT preprocessing).
+* `/V3_Basic_EfficientNet`: Baseline architecture with high FPR.
+* `/V8_SupCon_Stabilized`: The first Contrastive Learning implementation that stabilizes FPR.
+* `/V9.5_Champion_PIMES`: Final single-station model with physics injection.
+* `/STGAT_V1_MultiStation`: Graph Neural Network model for multi-station consensus (Optimal RAM).
 
-## 🚀 Cara Menggunakan Model (Inference)
+## 🚀 How to Use Models (Inference)
 
-1.  **Instalasi Git LFS:**
-    ```bash
-    git lfs install
-    git clone https://github.com/sumawan-bmkg/EQ-Precursor-Model-Zoo-Indonesia.git
-    ```
-2.  **Load Model (PyTorch):**
-    ```python
-    import torch
-    from V9_5_Champion_PIMES.architecture_v9_5 import PIMESModel
+1. **Git LFS Installation:** 
+```bash 
+git lfs install 
+git clone https://github.com/sumawan-bmkg/EQ-Precursor-Model-Zoo-Indonesia.git 
+```
+2. **Load Model (PyTorch):** 
+```python 
+imported torches 
+from V9_5_Champion_PIMES.architecture_v9_5 import PIMESModel 
 
-    model = PIMESModel() # Sesuaikan hyperparameter
-    model.load_state_dict(torch.load('V9_5_Champion_PIMES/v9_5_physics_best.pth', map_location='cpu'))
-    model.eval()
-    ```
+model = PIMESModel() # Tune hyperparameters 
+model.load_state_dict(torch.load('V9_5_Champion_PIMES/v9_5_physics_best.pth', map_location='cpu')) 
+model.eval() 
+```
 
 ---
 Contact: sumawanbmkg@gmail.com
