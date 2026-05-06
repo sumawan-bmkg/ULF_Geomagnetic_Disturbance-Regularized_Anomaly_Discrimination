@@ -1,0 +1,123 @@
+13 STRATEGY VALIDATION — V8 SupCon Model
+Timestamp  : 20260427_100738
+Model      : v3_v8_conv_fpr_best_weights.pth
+Dataset    : scalogram_v8_true_negatives.h5
+=================================================================
+
+=================================================================
+  RUNNING: s01_cosmic_gating_real
+=================================================================
+
+  → ✅ PASS  (1.4s)
+
+=================================================================
+  RUNNING: s02_circular_loss_real
+=================================================================
+
+  → ❌ FAIL  (24.8s)
+
+=================================================================
+  RUNNING: s03_polarization_real
+=================================================================
+
+  → ❌ FAIL  (16.1s)
+
+=================================================================
+  RUNNING: s04_dobrovolsky_real
+=================================================================
+
+  → ✅ PASS  (25.0s)
+
+=================================================================
+  RUNNING: s05_coi_masking_real
+=================================================================
+
+  → ✅ PASS  (106.5s)
+
+=================================================================
+  RUNNING: s06_multitask_loss_real
+=================================================================
+
+  → ❌ FAIL  (38.7s)
+
+=================================================================
+  RUNNING: s07_chronological_blind_test_real
+=================================================================
+
+  → ❌ FAIL  (156.8s)
+
+=================================================================
+  RUNNING: s08_preprocessing_real
+=================================================================
+
+  → ✅ PASS  (1.2s)
+
+=================================================================
+  RUNNING: s09_negative_control_real
+=================================================================
+
+  → ❌ FAIL  (25.0s)
+
+=================================================================
+  RUNNING: s10_latency_real
+=================================================================
+
+  → ✅ PASS  (25.5s)
+
+=================================================================
+  RUNNING: s11_ablation_real
+=================================================================
+
+  → ❌ FAIL  (108.6s)
+
+=================================================================
+  RUNNING: s12_calibration_real
+=================================================================
+
+  → ❌ FAIL  (46.5s)
+
+=================================================================
+  RUNNING: Strategy 13 — GMCC
+=================================================================
+
+=================================================================
+STRATEGY 13: GLOBAL MEAN CENTERED CORRELATION (GMCC)
+=================================================================
+  mu_global (TRAIN): H=0.0438  Z=0.0463
+
+  TEST A — Gating Independence:
+    Spearman(Kp, Gate) = 0.0147  p=0.7700  ❌ FAIL (target: r<-0.1, p<0.05)
+
+  TEST B — Lithospheric Proof (Z vs H):
+    Pearson raw  = 0.9962
+    Pearson GMCC = 0.9962  p=0.0000  ❌ FAIL (GMCC < raw)
+
+  TEST C — Dobrovolsky Strain:
+    Spearman(log_strain, conf) = -0.0472  p=0.5071  ❌ FAIL (target: r>0, p<0.05)
+
+  OVERALL S13: ❌ FAIL
+  Plot saved: D:\multi\scalogramv3\13strategy\s13_gmcc_validation_v8.png
+
+
+=================================================================
+  FINAL SUMMARY — 5/13 PASSED
+=================================================================
+Strategy                                        Status      Time
+-----------------------------------------------------------------
+S1:  Cosmic Gating Optimization                 ✅ PASS     1.4s
+S2:  Circular Loss Azimuth                      ❌ FAIL    24.8s
+S3:  Polarization-Aware Tensor                  ❌ FAIL    16.1s
+S4:  Dobrovolsky Strain Correlation             ✅ PASS    25.0s
+S5:  COI Masking                                ✅ PASS   106.5s
+S6:  Multi-Task Loss Balancing                  ❌ FAIL    38.7s
+S7:  Chronological Blind Test                   ❌ FAIL   156.8s
+S8:  Preprocessing Pipeline                     ✅ PASS     1.2s
+S9:  Negative Control Validation                ❌ FAIL    25.0s
+S10: Latency Optimization                       ✅ PASS    25.5s
+S11: Ablation Study                             ❌ FAIL   108.6s
+S12: Calibration & Uncertainty                  ❌ FAIL    46.5s
+S13: GMCC Validation                            ❌ FAIL   146.5s
+
+Total time : 722.6s
+PASS: 5/13   FAIL: 8/13
+Summary JSON: D:\multi\scalogramv3\13strategy\summary_20260427_100738.json

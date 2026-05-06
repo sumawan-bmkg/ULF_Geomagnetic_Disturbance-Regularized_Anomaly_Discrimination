@@ -1,0 +1,42 @@
+2026-04-28 09:53:14,215 - INFO - Loading model from d:\multi\scalogramv3\best_model_v3_retrained.pth
+2026-04-28 09:53:14,482 - INFO - Model loaded successfully
+2026-04-28 09:53:14,490 - INFO - ================================================================================
+2026-04-28 09:53:14,490 - INFO - S01: Cosmic Gating Validation
+2026-04-28 09:53:14,490 - INFO - ================================================================================
+2026-04-28 09:53:14,491 - INFO - Generating 100 test samples
+2026-04-28 09:53:14,867 - INFO - Processing 100 samples in 13 batches
+2026-04-28 09:53:27,717 - INFO - 
+================================================================================
+2026-04-28 09:53:27,718 - INFO - RESULTS ANALYSIS
+2026-04-28 09:53:27,719 - INFO - ================================================================================
+2026-04-28 09:53:27,719 - INFO - 
+Quiet Condition (Kp<3, Dst>-20):
+2026-04-28 09:53:27,719 - INFO -   Samples: 60
+2026-04-28 09:53:27,720 - INFO -   Gate Mean: 0.948 ± 0.001
+2026-04-28 09:53:27,720 - INFO -   Gate Median: 0.947
+2026-04-28 09:53:27,720 - INFO -   Gate Range: [0.946, 0.950]
+2026-04-28 09:53:27,722 - INFO - 
+Storm Condition (Kp>6 OR Dst<-50):
+2026-04-28 09:53:27,722 - INFO -   Samples: 15
+2026-04-28 09:53:27,722 - INFO -   Gate Mean: 0.947 ± 0.000
+2026-04-28 09:53:27,722 - INFO -   Gate Median: 0.947
+2026-04-28 09:53:27,723 - INFO -   Gate Range: [0.947, 0.947]
+2026-04-28 09:53:27,723 - INFO - 
+FPR Analysis:
+2026-04-28 09:53:27,723 - INFO -   FPR (quiet, gated): 1.000
+2026-04-28 09:53:27,723 - INFO -   FPR (storm, ungated): 0.456
+2026-04-28 09:53:27,724 - INFO -   FPR (storm, gated): 1.000
+2026-04-28 09:53:27,724 - INFO -   Reduction: -119.3%
+2026-04-28 09:53:27,728 - INFO - 
+Correlation Analysis:
+2026-04-28 09:53:27,728 - INFO -   Pearson R (gate, Kp): -0.451 (p=0.0000)
+2026-04-28 09:53:27,728 - INFO -   Pearson R (gate, Dst): 0.470 (p=0.0000)
+2026-04-28 09:53:27,728 - INFO - 
+================================================================================
+2026-04-28 09:53:27,729 - INFO - ================================================================================
+2026-04-28 09:53:27,729 - INFO - 
+Generating visualizations...
+2026-04-28 09:53:28,586 - INFO -   Saved: D:\multi\scalogramv3\13_Strategies_Evaluation\S01_Cosmic_Gating\visualizations\s01_gate_activation.png
+2026-04-28 09:53:29,280 - INFO -   Saved: D:\multi\scalogramv3\13_Strategies_Evaluation\S01_Cosmic_Gating\visualizations\s01_gate_distribution.png
+2026-04-28 09:53:29,283 - INFO - 
+Saved CSV: D:\multi\scalogramv3\13_Strategies_Evaluation\S01_Cosmic_Gating\logs\s01_gate_statistics.csv

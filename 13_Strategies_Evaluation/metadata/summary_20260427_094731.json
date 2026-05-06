@@ -1,0 +1,54 @@
+{
+  "S1:  Cosmic Gating Optimization": {
+    "passed": true,
+    "elapsed": 1.5656836032867432
+  },
+  "S2:  Circular Loss Azimuth": {
+    "passed": false,
+    "elapsed": 24.576011180877686
+  },
+  "S3:  Polarization-Aware Tensor": {
+    "passed": false,
+    "elapsed": 16.318902015686035
+  },
+  "S4:  Dobrovolsky Strain Correlation": {
+    "passed": true,
+    "elapsed": 24.408815145492554
+  },
+  "S5:  COI Masking": {
+    "passed": true,
+    "elapsed": 100.57297587394714
+  },
+  "S6:  Multi-Task Loss Balancing": {
+    "passed": 0,
+    "elapsed": 1.6972362995147705
+  },
+  "S7:  Chronological Blind Test": {
+    "passed": false,
+    "elapsed": 137.84352779388428
+  },
+  "S8:  Preprocessing Pipeline": {
+    "passed": true,
+    "elapsed": 0.8836863040924072
+  },
+  "S9:  Negative Control Validation": {
+    "passed": false,
+    "elapsed": 36.05761432647705
+  },
+  "S10: Latency Optimization": {
+    "passed": true,
+    "elapsed": 30.058658123016357
+  },
+  "S11: Ablation Study": {
+    "passed": 0,
+    "elapsed": 2.408238649368286
+  },
+  "S12: Calibration & Uncertainty": {
+    "passed": 0,
+    "elapsed": 203.22352075576782
+  },
+  "S13: GMCC Validation": {
+    "passed": 0,
+    "elapsed": 187.16078901290894
+  }
+}

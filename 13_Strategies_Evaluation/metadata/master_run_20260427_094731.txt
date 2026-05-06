@@ -1,0 +1,170 @@
+13 STRATEGY VALIDATION — V8 SupCon Model
+Timestamp  : 20260427_094731
+Model      : v3_v8_conv_fpr_best_weights.pth
+Dataset    : scalogram_v8_true_negatives.h5
+=================================================================
+
+=================================================================
+  RUNNING: s01_cosmic_gating_real
+=================================================================
+
+  → ✅ PASS  (1.6s)
+
+=================================================================
+  RUNNING: s02_circular_loss_real
+=================================================================
+
+  → ❌ FAIL  (24.6s)
+
+=================================================================
+  RUNNING: s03_polarization_real
+=================================================================
+
+  → ❌ FAIL  (16.3s)
+
+=================================================================
+  RUNNING: s04_dobrovolsky_real
+=================================================================
+
+  → ✅ PASS  (24.4s)
+
+=================================================================
+  RUNNING: s05_coi_masking_real
+=================================================================
+
+  → ✅ PASS  (100.6s)
+
+=================================================================
+  RUNNING: s06_multitask_loss_real
+=================================================================
+
+  → ❌ ERROR: too many values to unpack (expected 5)
+Traceback (most recent call last):
+  File "D:\multi\scalogramv3\pull_real\run_all_13strategies_v8.py", line 232, in run_strategy
+    results, passed = mod.run()
+  File "D:\multi\scalogramv3\pull_real\s06_multitask_loss_real.py", line 71, in run
+    grad_norms = compute_gradient_norms(
+  File "D:\multi\scalogramv3\pull_real\s06_multitask_loss_real.py", line 30, in compute_gradient_norms
+    det, mag, azm, _, _ = model(x_img, x_cos)
+ValueError: too many values to unpack (expected 5)
+
+
+=================================================================
+  RUNNING: s07_chronological_blind_test_real
+=================================================================
+
+  → ❌ FAIL  (137.8s)
+
+=================================================================
+  RUNNING: s08_preprocessing_real
+=================================================================
+
+  → ✅ PASS  (0.9s)
+
+=================================================================
+  RUNNING: s09_negative_control_real
+=================================================================
+
+  → ❌ FAIL  (36.1s)
+
+=================================================================
+  RUNNING: s10_latency_real
+=================================================================
+
+  → ✅ PASS  (30.1s)
+
+=================================================================
+  RUNNING: s11_ablation_real
+=================================================================
+
+  → ❌ ERROR: too many values to unpack (expected 5)
+Traceback (most recent call last):
+  File "D:\multi\scalogramv3\pull_real\run_all_13strategies_v8.py", line 232, in run_strategy
+    results, passed = mod.run()
+  File "D:\multi\scalogramv3\pull_real\s11_ablation_real.py", line 69, in run
+    res = run_ablation_variant(model, data['tensors'], data['cosmic'], labels, v, batch_size=4)
+  File "D:\multi\scalogramv3\pull_real\s11_ablation_real.py", line 40, in run_ablation_variant
+    det, _, _, _, _ = model(x_img, x_cos)
+ValueError: too many values to unpack (expected 5)
+
+
+=================================================================
+  RUNNING: s12_calibration_real
+=================================================================
+
+  → ❌ ERROR: Unable to allocate 3.39 GiB for an array with shape (1644, 3, 128, 1440) and data type float32
+Traceback (most recent call last):
+  File "D:\multi\scalogramv3\pull_real\run_all_13strategies_v8.py", line 232, in run_strategy
+    results, passed = mod.run()
+  File "D:\multi\scalogramv3\pull_real\s12_calibration_real.py", line 59, in run
+    tensors_all = np.array(f['val']['tensors'][idx], dtype=np.float32)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 3.39 GiB for an array with shape (1644, 3, 128, 1440) and data type float32
+
+
+=================================================================
+  RUNNING: Strategy 13 — GMCC
+=================================================================
+
+=================================================================
+STRATEGY 13: GLOBAL MEAN CENTERED CORRELATION (GMCC)
+=================================================================
+  mu_global (TRAIN): H=0.0438  Z=0.0463
+
+  → ❌ ERROR: [enforce fail at ..\c10\core\impl\alloc_cpu.cpp:72] data. DefaultCPUAllocator: not enough memory: you tried to allocate 23592960 bytes.
+Traceback (most recent call last):
+  File "D:\multi\scalogramv3\pull_real\run_all_13strategies_v8.py", line 281, in main
+    passed_13, res_13 = run_strategy_13(fh)
+  File "D:\multi\scalogramv3\pull_real\run_all_13strategies_v8.py", line 125, in run_strategy_13
+    probs, _, _ = run_inference_v8_batch(model, tensors, cosmic)
+  File "D:\multi\scalogramv3\pull_real\run_all_13strategies_v8.py", line 70, in run_inference_v8_batch
+    det, mag, azm, _, _, _ = model(x, c)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torch\nn\modules\module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\multi\scalogramv3\pull_real\V3_Model_v8.py", line 335, in forward
+    x = self.features(x_img)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torch\nn\modules\module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torch\nn\modules\container.py", line 204, in forward
+    input = module(input)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torch\nn\modules\module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torch\nn\modules\container.py", line 204, in forward
+    input = module(input)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torch\nn\modules\module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torchvision\models\efficientnet.py", line 165, in forward
+    result = self.block(input)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torch\nn\modules\module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torch\nn\modules\container.py", line 204, in forward
+    input = module(input)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torch\nn\modules\module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\multi\scalogramv3\venv_cuda_310\lib\site-packages\torchvision\ops\misc.py", line 260, in forward
+    return scale * input
+RuntimeError: [enforce fail at ..\c10\core\impl\alloc_cpu.cpp:72] data. DefaultCPUAllocator: not enough memory: you tried to allocate 23592960 bytes.
+
+
+
+=================================================================
+  FINAL SUMMARY — 5/13 PASSED
+=================================================================
+Strategy                                        Status      Time
+-----------------------------------------------------------------
+S1:  Cosmic Gating Optimization                 ✅ PASS     1.6s
+S2:  Circular Loss Azimuth                      ❌ FAIL    24.6s
+S3:  Polarization-Aware Tensor                  ❌ FAIL    16.3s
+S4:  Dobrovolsky Strain Correlation             ✅ PASS    24.4s
+S5:  COI Masking                                ✅ PASS   100.6s
+S6:  Multi-Task Loss Balancing                  ❌ FAIL     1.7s  [too many values to unpack (expected]
+S7:  Chronological Blind Test                   ❌ FAIL   137.8s
+S8:  Preprocessing Pipeline                     ✅ PASS     0.9s
+S9:  Negative Control Validation                ❌ FAIL    36.1s
+S10: Latency Optimization                       ✅ PASS    30.1s
+S11: Ablation Study                             ❌ FAIL     2.4s  [too many values to unpack (expected]
+S12: Calibration & Uncertainty                  ❌ FAIL   203.2s  [Unable to allocate 3.39 GiB for an ]
+S13: GMCC Validation                            ❌ FAIL   187.2s  [[enforce fail at ..\c10\core\impl\a]
+
+Total time : 767.0s
+PASS: 5/13   FAIL: 8/13
+Summary JSON: D:\multi\scalogramv3\13strategy\summary_20260427_094731.json

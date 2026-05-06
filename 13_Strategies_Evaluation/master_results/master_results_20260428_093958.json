@@ -1,0 +1,98 @@
+{
+  "timestamp": "20260428_093958",
+  "weights_path": "d:\\multi\\scalogramv3\\best_model_v3_retrained.pth",
+  "total_time": 359.01475071907043,
+  "results": {
+    "S01": {
+      "name": "Cosmic Gating",
+      "status": "FAIL",
+      "time": 37.44022226333618,
+      "output": "2026-04-28 09:34:07,512 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:34:08,178 - INFO - Model loaded successfully\n2026-04-28 09:34:08,195 - INFO - ================================================================================\n2026-04-28 09:34:08,195 - INFO - S01: Cosmic Gating Validation\n2026-04-28 09:34:08,195 - INFO - ================================================================================\n2026-04-28 09:34:08,195 - INFO - Generating 100 t",
+      "returncode": 1
+    },
+    "S02": {
+      "name": "Circular Azimuth",
+      "status": "PASS",
+      "time": 33.99382567405701,
+      "output": "2026-04-28 09:34:43,508 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:34:43,975 - INFO - Model loaded successfully.\n2026-04-28 09:34:43,977 - INFO - ================================================================================\n2026-04-28 09:34:43,977 - INFO - S02: Circular Azimuth Validation\n2026-04-28 09:34:43,977 - INFO - ================================================================================\n2026-04-28 09:34:43,977 - INFO - Generating 1",
+      "returncode": 0
+    },
+    "S03": {
+      "name": "Polarization Tensor",
+      "status": "FAIL",
+      "time": 31.46110510826111,
+      "output": "2026-04-28 09:35:17,900 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:35:18,421 - INFO - ================================================================================\n2026-04-28 09:35:18,421 - INFO - S03: Polarization Tensor Validation\n2026-04-28 09:35:18,421 - INFO - ================================================================================\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S03_Polarizat",
+      "returncode": 1
+    },
+    "S04": {
+      "name": "Dobrovolsky Strain",
+      "status": "PASS",
+      "time": 36.46824860572815,
+      "output": "2026-04-28 09:35:49,810 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:35:50,368 - INFO - ================================================================================\n2026-04-28 09:35:50,368 - INFO - S04: Dobrovolsky Strain Constraint Validation\n2026-04-28 09:35:50,368 - INFO - ================================================================================\n2026-04-28 09:35:50,368 - INFO - Generating 100 magnitude constrained samples...\n2026-04-28 ",
+      "returncode": 0
+    },
+    "S05": {
+      "name": "COI Masking",
+      "status": "PASS",
+      "time": 15.742664337158203,
+      "output": "2026-04-28 09:36:27,918 - INFO - ================================================================================\n2026-04-28 09:36:27,918 - INFO - S05: Cone of Influence (COI) Masking Validation\n2026-04-28 09:36:27,918 - INFO - ================================================================================\n2026-04-28 09:36:28,047 - INFO - \nRESULTS ANALYSIS:\n2026-04-28 09:36:28,047 - INFO -   Masked Ratio: 0.316\n--- Logging error ---\nTraceback (most recent call last):\n  File \"C:\\Python314\\Lib\\lo",
+      "returncode": 0
+    },
+    "S06": {
+      "name": "MultiTask Balancing",
+      "status": "FAIL",
+      "time": 33.09375977516174,
+      "output": "2026-04-28 09:36:42,885 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:36:43,528 - INFO - ================================================================================\n2026-04-28 09:36:43,528 - INFO - S06: MultiTask Gradient Balancing Validation\n2026-04-28 09:36:43,528 - INFO - ================================================================================\n",
+      "returncode": 3221225477
+    },
+    "S07": {
+      "name": "Chronological BlindTest",
+      "status": "FAIL",
+      "time": 23.24156880378723,
+      "output": "2026-04-28 09:37:14,057 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:37:14,408 - INFO - Dynamic Threshold Extracted from Checkpoint: 0.500\n2026-04-28 09:37:14,447 - INFO - ================================================================================\n2026-04-28 09:37:14,447 - INFO - S07: Chronological BlindTest Validation\n2026-04-28 09:37:14,447 - INFO - ================================================================================\n2026-04-28 09:",
+      "returncode": 1
+    },
+    "S08": {
+      "name": "Preprocessing Pipeline",
+      "status": "PASS",
+      "time": 5.84926700592041,
+      "output": "2026-04-28 09:37:34,779 - INFO - ================================================================================\n2026-04-28 09:37:34,780 - INFO - S08: Preprocessing Pipeline SNR Verification\n2026-04-28 09:37:34,780 - INFO - ================================================================================\n2026-04-28 09:37:34,981 - INFO - \nRESULTS ANALYSIS:\n2026-04-28 09:37:34,981 - INFO -   Raw Signal SNR: -4.43 dB\n2026-04-28 09:37:34,981 - INFO -   Processed Signal SNR: 29.91 dB\n2026-04-28 09:37",
+      "returncode": 0
+    },
+    "S09": {
+      "name": "Negative Control",
+      "status": "PASS",
+      "time": 23.199907064437866,
+      "output": "2026-04-28 09:37:41,805 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:37:42,180 - INFO - Dynamic Threshold Extracted from Checkpoint: 0.500\n2026-04-28 09:37:42,211 - INFO - ================================================================================\n2026-04-28 09:37:42,211 - INFO - S09: Negative Control Verification\n2026-04-28 09:37:42,211 - INFO - ================================================================================\n2026-04-28 09:37:42",
+      "returncode": 0
+    },
+    "S10": {
+      "name": "Latency Optimization",
+      "status": "PASS",
+      "time": 57.4330472946167,
+      "output": "2026-04-28 09:38:05,322 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:38:05,824 - INFO - ================================================================================\n2026-04-28 09:38:05,824 - INFO - S10: Latency Benchmark (CPU)\n2026-04-28 09:38:05,824 - INFO - ================================================================================\n2026-04-28 09:38:05,824 - INFO - Performing Warm-Up Steps (10 iter)...\n2026-04-28 09:38:07,417 - INFO - Measu",
+      "returncode": 0
+    },
+    "S11": {
+      "name": "Ablation Study",
+      "status": "PASS",
+      "time": 27.093106746673584,
+      "output": "2026-04-28 09:39:03,166 - INFO - Loading full model architecture from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:39:03,447 - INFO - Dynamic Threshold Extracted from Checkpoint: 0.500\n2026-04-28 09:39:03,474 - INFO - ================================================================================\n2026-04-28 09:39:03,474 - INFO - S11: Ablation Study Impact Metrics\n2026-04-28 09:39:03,474 - INFO - ================================================================================\n2",
+      "returncode": 0
+    },
+    "S12": {
+      "name": "Calibration Uncertainty",
+      "status": "FAIL",
+      "time": 25.7449688911438,
+      "output": "2026-04-28 09:39:30,252 - INFO - Loading full model architecture from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:39:30,955 - INFO - ================================================================================\n2026-04-28 09:39:30,955 - INFO - S12: Calibration Uncertainty Verification\n2026-04-28 09:39:30,955 - INFO - ================================================================================\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_",
+      "returncode": 1
+    },
+    "S13": {
+      "name": "GMCC Validation",
+      "status": "PASS",
+      "time": 8.250730037689209,
+      "output": "2026-04-28 09:39:55,867 - INFO - Loading full model architecture from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:39:56,171 - INFO - ================================================================================\n2026-04-28 09:39:56,172 - INFO - S13: GMCC Validation\n2026-04-28 09:39:56,172 - INFO - ================================================================================\n2026-04-28 09:39:56,177 - INFO - \nRESULTS ANALYSIS (Synthetics Filtered):\n2026-04-28 09:39:56,177 -",
+      "returncode": 0
+    }
+  }
+}

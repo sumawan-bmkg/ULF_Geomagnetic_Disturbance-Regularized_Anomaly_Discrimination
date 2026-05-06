@@ -1,0 +1,34 @@
+# Requirements for 13 Strategies Evaluation
+# ScalogramV3 V8 - Production Ready Evaluation Suite
+# Date: April 28, 2026
+
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Data Processing
+pandas>=2.0.0
+h5py>=3.8.0
+pywt>=1.4.1
+
+# Visualization (Publication Quality)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+
+# Metrics & Statistics
+scikit-learn>=1.2.0
+statsmodels>=0.14.0
+
+# Calibration & Uncertainty
+netcal>=1.3.0
+
+# Logging & Progress
+tqdm>=4.65.0
+colorama>=0.4.6
+
+# Utilities
+pathlib>=1.0.1
+argparse>=1.4.0

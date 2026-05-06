@@ -1,0 +1,7 @@
+component,fpr,delta_fpr,pct_increase
+Full Model (V8),0.125,0.0,0.0
+- SupCon Loss,0.25,0.125,100.0
+- Label Smoothing,0.236,0.11099999999999999,88.79999999999998
+- Cosmic Gating,0.194,0.069,55.2
+- True Negatives,0.181,0.055999999999999994,44.8
+- GNN Modules,0.167,0.04200000000000001,33.60000000000001

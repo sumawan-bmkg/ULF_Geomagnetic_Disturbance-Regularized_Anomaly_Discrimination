@@ -1,0 +1,98 @@
+{
+  "timestamp": "20260428_091444",
+  "weights_path": "d:\\multi\\scalogramv3\\best_model_v3_retrained.pth",
+  "total_time": 70.1735212802887,
+  "results": {
+    "S01": {
+      "name": "Cosmic Gating",
+      "status": "FAIL",
+      "time": 9.188815116882324,
+      "output": "2026-04-28 09:13:42,106 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S01_Cosmic_Gating\\evaluate_s01.py\", line 429, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S01_Cosmic_Gating\\evaluate_s01.py\", line 416, in main\n    evaluator = CosmicGatingEvaluator(\n        model_path=args.weights,\n        output_dir=args.output_dir,\n        log_di",
+      "returncode": 1
+    },
+    "S02": {
+      "name": "Circular Azimuth",
+      "status": "FAIL",
+      "time": 4.8167479038238525,
+      "output": "2026-04-28 09:13:47,116 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S02_Circular_Azimuth\\evaluate_s02.py\", line 199, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S02_Circular_Azimuth\\evaluate_s02.py\", line 195, in main\n    evaluator = CircularAzimuthEvaluator(args.weights, args.output_dir, args.log_dir)\n  File \"D:\\multi\\scalogramv3\\1",
+      "returncode": 1
+    },
+    "S03": {
+      "name": "Polarization Tensor",
+      "status": "FAIL",
+      "time": 4.785512208938599,
+      "output": "2026-04-28 09:13:51,878 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S03_Polarization_Tensor\\evaluate_s03.py\", line 210, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S03_Polarization_Tensor\\evaluate_s03.py\", line 206, in main\n    evaluator = PolarizationEvaluator(args.weights)\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S03_",
+      "returncode": 1
+    },
+    "S04": {
+      "name": "Dobrovolsky Strain",
+      "status": "FAIL",
+      "time": 4.754941940307617,
+      "output": "2026-04-28 09:13:56,654 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S04_Dobrovolsky_Strain\\evaluate_s04.py\", line 205, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S04_Dobrovolsky_Strain\\evaluate_s04.py\", line 201, in main\n    evaluator = DobrovolskyEvaluator(args.weights)\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S04_Dob",
+      "returncode": 1
+    },
+    "S05": {
+      "name": "COI Masking",
+      "status": "PASS",
+      "time": 7.309096097946167,
+      "output": "2026-04-28 09:14:01,549 - INFO - ================================================================================\n2026-04-28 09:14:01,550 - INFO - S05: Cone of Influence (COI) Masking Validation\n2026-04-28 09:14:01,550 - INFO - ================================================================================\n2026-04-28 09:14:01,616 - INFO - \nRESULTS ANALYSIS:\n2026-04-28 09:14:01,617 - INFO -   Masked Ratio: 0.316\n--- Logging error ---\nTraceback (most recent call last):\n  File \"C:\\Python314\\Lib\\lo",
+      "returncode": 0
+    },
+    "S06": {
+      "name": "MultiTask Balancing",
+      "status": "FAIL",
+      "time": 4.8028647899627686,
+      "output": "2026-04-28 09:14:08,756 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S06_MultiTask_Balancing\\evaluate_s06.py\", line 208, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S06_MultiTask_Balancing\\evaluate_s06.py\", line 203, in main\n    evaluator = GradientBalancingEvaluator(args.weights)\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation",
+      "returncode": 1
+    },
+    "S07": {
+      "name": "Chronological BlindTest",
+      "status": "FAIL",
+      "time": 5.459521293640137,
+      "output": "2026-04-28 09:14:13,968 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:14:14,354 - INFO - Dynamic Threshold Extracted from Checkpoint: 0.500\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S07_Chronological_BlindTest\\evaluate_s07.py\", line 228, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S07_Chronological_BlindTest\\evaluate_s07.py\", line 224, in main\n    evaluator = Bl",
+      "returncode": 1
+    },
+    "S08": {
+      "name": "Preprocessing Pipeline",
+      "status": "PASS",
+      "time": 4.617661952972412,
+      "output": "2026-04-28 09:14:18,185 - INFO - ================================================================================\n2026-04-28 09:14:18,185 - INFO - S08: Preprocessing Pipeline SNR Verification\n2026-04-28 09:14:18,185 - INFO - ================================================================================\n2026-04-28 09:14:18,301 - INFO - \nRESULTS ANALYSIS:\n2026-04-28 09:14:18,302 - INFO -   Raw Signal SNR: -4.41 dB\n2026-04-28 09:14:18,302 - INFO -   Processed Signal SNR: 29.91 dB\n2026-04-28 09:14",
+      "returncode": 0
+    },
+    "S09": {
+      "name": "Negative Control",
+      "status": "FAIL",
+      "time": 4.864931583404541,
+      "output": "2026-04-28 09:14:23,675 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:14:23,942 - INFO - Dynamic Threshold Extracted from Checkpoint: 0.500\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S09_Negative_Control\\evaluate_s09.py\", line 199, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S09_Negative_Control\\evaluate_s09.py\", line 195, in main\n    evaluator = NegativeControlE",
+      "returncode": 1
+    },
+    "S10": {
+      "name": "Latency Optimization",
+      "status": "FAIL",
+      "time": 4.769207715988159,
+      "output": "2026-04-28 09:14:28,475 - INFO - Loading model from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S10_Latency_Optimization\\evaluate_s10.py\", line 203, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S10_Latency_Optimization\\evaluate_s10.py\", line 199, in main\n    evaluator = LatencyEvaluator(args.weights)\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S10_Lat",
+      "returncode": 1
+    },
+    "S11": {
+      "name": "Ablation Study",
+      "status": "FAIL",
+      "time": 4.776149034500122,
+      "output": "2026-04-28 09:14:33,241 - INFO - Loading full model architecture from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\n2026-04-28 09:14:33,491 - INFO - Dynamic Threshold Extracted from Checkpoint: 0.500\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S11_Ablation_Study\\evaluate_s11.py\", line 195, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S11_Ablation_Study\\evaluate_s11.py\", line 191, in main\n    evaluator = Ab",
+      "returncode": 1
+    },
+    "S12": {
+      "name": "Calibration Uncertainty",
+      "status": "FAIL",
+      "time": 5.176844358444214,
+      "output": "2026-04-28 09:14:38,340 - INFO - Loading full model architecture from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S12_Calibration_Uncertainty\\evaluate_s12.py\", line 232, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S12_Calibration_Uncertainty\\evaluate_s12.py\", line 228, in main\n    evaluator = CalibrationEvaluator(args.weights)\n  File \"D:\\multi\\scalogramv3\\13_S",
+      "returncode": 1
+    },
+    "S13": {
+      "name": "GMCC Validation",
+      "status": "FAIL",
+      "time": 4.848968267440796,
+      "output": "2026-04-28 09:14:43,267 - INFO - Loading full model architecture from d:\\multi\\scalogramv3\\best_model_v3_retrained.pth\nTraceback (most recent call last):\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S13_GMCC_Validation\\evaluate_s13.py\", line 235, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S13_GMCC_Validation\\evaluate_s13.py\", line 231, in main\n    evaluator = GMCCEvaluator(args.weights)\n  File \"D:\\multi\\scalogramv3\\13_Strategies_Evaluation\\S1",
+      "returncode": 1
+    }
+  }
+}

@@ -1,0 +1,6 @@
+2026-04-28 09:54:49,457 - INFO - Loading model from d:\multi\scalogramv3\best_model_v3_retrained.pth
+2026-04-28 09:54:49,760 - INFO - Dynamic Threshold Extracted from Checkpoint: 0.500
+2026-04-28 09:54:49,785 - INFO - ================================================================================
+2026-04-28 09:54:49,785 - INFO - S07: Chronological BlindTest Validation
+2026-04-28 09:54:49,786 - INFO - ================================================================================
+2026-04-28 09:54:49,786 - INFO - Generating 100 unseen 2026 data samples

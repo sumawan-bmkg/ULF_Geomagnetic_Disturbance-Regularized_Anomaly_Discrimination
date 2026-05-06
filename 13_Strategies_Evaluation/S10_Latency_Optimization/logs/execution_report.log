@@ -1,0 +1,17 @@
+2026-04-28 09:55:30,271 - INFO - Loading model from d:\multi\scalogramv3\best_model_v3_retrained.pth
+2026-04-28 09:55:30,560 - INFO - ================================================================================
+2026-04-28 09:55:30,560 - INFO - S10: Latency Benchmark (CPU)
+2026-04-28 09:55:30,560 - INFO - ================================================================================
+2026-04-28 09:55:30,560 - INFO - Performing Warm-Up Steps (10 iter)...
+2026-04-28 09:55:32,103 - INFO - Measuring Single-Sample Execution Times (100 iter)...
+2026-04-28 09:55:45,953 - INFO - Measuring Batch-8 Throughput Executions (20 iter)...
+2026-04-28 09:56:06,286 - INFO - 
+RESULTS ANALYSIS:
+2026-04-28 09:56:06,287 - INFO -   Target Latency limit: < 0.50 s
+2026-04-28 09:56:06,287 - INFO -   Mean Single-Sample Latency: 0.135 s
+2026-04-28 09:56:06,287 - INFO -   95th Percentile Latency: 0.149 s
+2026-04-28 09:56:06,289 - INFO -   Mean Batch-8 Latency: 0.988 s
+2026-04-28 09:56:06,289 - INFO -   Projected Throughput: 29141 predictions/hour
+2026-04-28 09:56:06,289 - INFO - 
+================================================================================
+2026-04-28 09:56:06,290 - INFO - ================================================================================
