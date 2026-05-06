@@ -43,6 +43,7 @@ model = PIMESModel() # Tune hyperparameters
 model.load_state_dict(torch.load('V9_5_Champion_PIMES/v9_5_physics_best.pth', map_location='cpu')) 
 model.eval() 
 ```
+<img width="4103" height="1627" alt="UMTA" src="https://github.com/user-attachments/assets/1f09a4d9-dc66-4942-8a54-1028dc4f00db" />
 
 ---
 Contact: sumawanbmkg@gmail.com
