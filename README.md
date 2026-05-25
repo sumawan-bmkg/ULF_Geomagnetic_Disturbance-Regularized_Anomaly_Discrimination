@@ -4,6 +4,9 @@ This repository contains a backup of the model architecture and weights (`.pth`)
 
 ⚠️ **IMPORTANT NOTE:** This repository uses **Git LFS**. Make sure you have Git LFS installed before cloning.
 
+<img width="1280" height="853" alt="photo_2026-05-24_12-45-22" src="https://github.com/user-attachments/assets/02ef1107-7607-4e1e-b97e-492af2e265b7" />
+
+
 ---
 
 ## 📈 Model Evolution Genealogy (Ablation Study)
